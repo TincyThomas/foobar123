@@ -1,0 +1,12 @@
+def solution(x):
+    c = 0
+    a = 0
+    for i in x:
+        if i == '>':
+            for l in x[a+1:]:
+                if l == '<':
+                    c = c + 2
+        a= a+1
+        continue
+    return c
+print(solution("><><>-<->"))

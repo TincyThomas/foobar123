@@ -1,0 +1,22 @@
+def solution(n):
+    number = int(n)
+    count = 0
+
+    if number == 0:
+        return 1
+    if number < 0:
+        number = number * -1
+        count = 2
+
+    while number != 1:
+        if number & 1:
+            if number & 2 and number != 3:
+                number = number + 1
+            else:
+                number = number - 1
+        else:
+            number = number // 2
+
+        count = count + 1
+
+    return count
